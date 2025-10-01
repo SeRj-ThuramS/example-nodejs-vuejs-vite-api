@@ -11,7 +11,7 @@
     "build:frontend": "vite build",
     "build:backend": "vite --config vite.backend.config.js build",
     "gen:pkgDist": "node generatePackageJson.js",
-    "preview": "vite preview"
+    "preview": "cd ./dist && node server.cjs"
   },
   "dependencies": {
     "cors": "^2.8.5",

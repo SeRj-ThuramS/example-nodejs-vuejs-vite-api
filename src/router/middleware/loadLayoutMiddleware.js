@@ -8,7 +8,7 @@ export async function loadLayoutMiddleware(route) {
         console.error("Error occurred in processing of layouts: ", e);
         console.log("Mounted DefaultLayout");
         let layout = "DefaultLayout";
-        let layoutComponent = await import(`@/layouts/${layout}.vue`);
+        let layoutComponent = await import(`../../layouts/${layout}.vue`);
         route.meta.layoutComponent = layoutComponent.default;
     }
 }

@@ -20,5 +20,12 @@ export default defineConfig({
     },
     build: {
         outDir: 'dist/client',
+        rollupOptions: {
+            output: {
+                entryFileNames: 'assets/[hash].js',
+                chunkFileNames: 'assets/[hash].js',
+                assetFileNames: 'assets/[hash].[ext]'
+            }
+        }
     }
 })
